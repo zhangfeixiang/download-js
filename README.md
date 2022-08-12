@@ -1,4 +1,4 @@
-# download.js
+# batch-download.js
 
 一个免费的命令行批量下载，可保存链接路径自动创建目录的nodejs库
 
@@ -10,7 +10,7 @@
 
 ### 1.命令行
     ```
-    npm install -g download-js
+    npm install -g batch-downloadjs
     
     download http://xxx.xx/xxx.mp4 https://yyyy.yy/yyyy.jpg
     download -o ./ http://xxx.xx/xxx.mp4 https://yyyy.yy/yyyy.jpg http://xxx.xxx.com/xxx/xxx/xxx/filename.png

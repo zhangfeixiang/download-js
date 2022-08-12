@@ -1,5 +1,5 @@
 {
-  "name": "download-js",
+  "name": "batch-downloadjs",
   "version": "1.0.0",
   "description": "一个免费的命令行批量下载，可保存链接路径自动创建目录的nodejs库",
   "main": "index.js",
