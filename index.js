@@ -27,7 +27,7 @@ const config = {
 }
 let progressBarA = new progressBar(config);
 const errlist = [];
-let basePath = __dirname;
+let basePath = './';
 
 // 下载队列
 class Queue {
@@ -71,7 +71,7 @@ function createFolders(pathStr, {
 
     // http://xxx.xxx.com/xxx/xxx/xxx/filename.png
     let dirs = pathStr.split('/').slice(3, -1)
-    let currentPath = basePath || __dirname;
+    let currentPath = basePath || './';
     dirs
         .forEach(dir => {
             // 如果路径包含 xx//x.png 空目录转为null
@@ -188,7 +188,7 @@ function calcProgress({
  */
 async function downloader({
     url,
-    basePath = __dirname,
+    basePath = './',
     path: _path
 }, cb = (op) => {}) {
     return new Promise(async (reslove, reject) => {
@@ -361,7 +361,9 @@ async function showMenu() {
         }
     }
     const result = await startDownloadList(argv._);
-    console.log('这些下载失败了，检查一下吧 ~=>', result);
+    if(result.error.length) {
+        console.log('这些下载失败了，检查一下吧 ~=>', result);
+    }
 }
 
 
